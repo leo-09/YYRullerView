@@ -56,7 +56,7 @@
 
 - (void)initialization {
     // 初始化内置参数
-    self.unitPX = 12;//cy_fit(24);
+    self.unitPX = cy_fit(20);
     
     // 初始化外部默认参数
     self.unitValue = 1;
@@ -213,6 +213,8 @@
     self.rulerView.isShowRulerValue = self.isShowRulerValue;
     self.rulerView.pointerFrame = self.pointerView.frame;
     self.rulerView.rulerBackgroundColor = self.rulerBackgroundColor;
+    self.rulerView.segments = self.segments;
+    self.rulerView.segmentColor = self.segmentColor;
 }
 
 - (BOOL)paramIsAvialiable {

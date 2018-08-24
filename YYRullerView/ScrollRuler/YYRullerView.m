@@ -114,6 +114,26 @@
             }
         }
     }
+    
+    // 画时间段高亮的部分
+    float y = long_mark_top + self.h_height + 2;// 紧贴时间轴下面
+    CGContextSetRGBStrokeColor(context, _segmentColor.R, _segmentColor.G, _segmentColor.B, 1.0);
+    CGContextSetLineWidth(context, 3);
+    
+    float startX = _pointerFrame.origin.x + _pointerFrame.size.width / 2.0;
+    
+    for (int i = 0; i < self.segments.count; i++) {
+        TimeSegment *seg = self.segments[i];
+        float x0 = startX + (self.unitPX / self.unitValue) * seg.startAt;
+        float x1 = startX + (self.unitPX / self.unitValue) * (seg.startAt + seg.duration);
+        
+        CGPoint aPoints[2];// X轴
+        aPoints[0] = CGPointMake(x0, y);// 起始点
+        aPoints[1] = CGPointMake(x1, y);// 终点
+        
+        CGContextAddLines(context, aPoints, 2);     // 添加线
+        CGContextDrawPath(context, kCGPathStroke);  // 根据坐标绘制路径
+    }
 }
 
 #pragma mark - public method
@@ -144,7 +164,7 @@
             short_mark_top = mark_bottom - _m_height;
             long_mark_top = mark_bottom - _h_height;
 //            num_top = long_mark_top - num_height - cy_fit(self.step);
-            num_top = long_mark_top + self.h_height + 4;
+            num_top = long_mark_top + self.h_height + 8;
         } else if (_rulerFace == RulerFace_down_right) {
             mark_bottom = cy_selfHeight / 2.0;
             short_mark_top = mark_bottom + _m_height;

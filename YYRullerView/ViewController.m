@@ -28,7 +28,7 @@
 #pragma mark - UI
 
 - (void) addRulerView {
-    CGRect f = CGRectMake(0, 64, cy_ScreenW, 80);
+    CGRect f = CGRectMake(0, 64, cy_ScreenW, 100);
     
     // 经典标尺 样式
     YYScrollRulerView *rulerClassic = [[YYScrollRulerView alloc] initWithFrame:f];
@@ -39,6 +39,19 @@
     rulerClassic.step = 5;
     rulerClassic.isTimeAlias = YES;
     rulerClassic.rulerBackgroundColor = YYUIColorFromRGB(0XF2F2F2);
+    rulerClassic.segmentColor = customColorMake(88, 185, 251);
+    
+    NSMutableArray *segments = [[NSMutableArray alloc] init];
+    for (int i = 0; i < 8; i++) {
+        TimeSegment *t = [[TimeSegment alloc] init];
+        t.startAt = 6 * 60 * 60 + 10 * 60 + i * (60 * 60);
+        t.duration = 47 * 60;
+        
+        [segments addObject:t];
+    }
+    
+    rulerClassic.segments = segments;
+    
     [rulerClassic customRulerWithLineColor:customColorMake(153, 153, 153)
                                   numColor:YYUIColorFromRGB(0x737373)
                               scrollEnable:YES];
@@ -54,7 +67,7 @@
 }
 
 - (void)rulerRunEndValue:(NSInteger)value {
-    NSLog(@"------->>>：%ld", (long)value);
+    NSLog(@"end ------->>>：%ld", (long)value);
 }
 
 @end

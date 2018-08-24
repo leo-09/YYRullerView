@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043162E9212FE72E008D11B1 /* TimeSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 043162E8212FE72E008D11B1 /* TimeSegment.m */; };
 		04A8ABC0212FD9770045F44E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8ABBF212FD9770045F44E /* AppDelegate.m */; };
 		04A8ABC3212FD9770045F44E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8ABC2212FD9770045F44E /* ViewController.m */; };
 		04A8ABC6212FD9770045F44E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A8ABC4212FD9770045F44E /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		043162E7212FE72E008D11B1 /* TimeSegment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeSegment.h; sourceTree = "<group>"; };
+		043162E8212FE72E008D11B1 /* TimeSegment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeSegment.m; sourceTree = "<group>"; };
 		04A8ABBB212FD9770045F44E /* YYRullerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYRullerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A8ABBE212FD9770045F44E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04A8ABBF212FD9770045F44E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,9 +85,11 @@
 			isa = PBXGroup;
 			children = (
 				04A8ABD5212FD9860045F44E /* YYScrollRulerView.h */,
-				04A8ABD6212FD9860045F44E /* YYRullerView.m */,
 				04A8ABD7212FD9860045F44E /* YYScrollRulerView.m */,
 				04A8ABD8212FD9860045F44E /* YYRullerView.h */,
+				04A8ABD6212FD9860045F44E /* YYRullerView.m */,
+				043162E7212FE72E008D11B1 /* TimeSegment.h */,
+				043162E8212FE72E008D11B1 /* TimeSegment.m */,
 			);
 			path = ScrollRuler;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 				04A8ABDA212FD9860045F44E /* YYScrollRulerView.m in Sources */,
 				04A8ABC3212FD9770045F44E /* ViewController.m in Sources */,
 				04A8ABCE212FD9790045F44E /* main.m in Sources */,
+				043162E9212FE72E008D11B1 /* TimeSegment.m in Sources */,
 				04A8ABC0212FD9770045F44E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

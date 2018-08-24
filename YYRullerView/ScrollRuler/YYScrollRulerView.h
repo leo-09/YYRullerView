@@ -98,6 +98,12 @@
 // 当前值的颜色
 @property (nonatomic, strong) UIColor *curLabelColor;
 
+// 高亮的时间段 的颜色
+@property (nonatomic) CustomeColor segmentColor;
+
+// 高亮的时间段 的集合
+@property (nonatomic, strong) NSMutableArray<TimeSegment *> *segments;
+
 /**
  经典样式的标尺
  */

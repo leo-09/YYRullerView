@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TimeSegment.h"
 
 #pragma mark - 自定义的宏
 
@@ -93,16 +94,22 @@ typedef void(^Handler)(void);
 @property (nonatomic, assign) BOOL isShowRulerValue;
 
 // 标尺数字颜色
-@property (nonatomic, strong) UIColor *txtColor;//标尺上数字的颜色
+@property (nonatomic, strong) UIColor *txtColor;
 
 // 标尺线的颜色
-@property (nonatomic) CustomeColor lineColor;//标尺线的颜色
+@property (nonatomic) CustomeColor lineColor;
 
 // 指针位置，默认居中
 @property (nonatomic, assign) CGRect pointerFrame;
 
 // 标尺视图的背景颜色 默认白色
 @property (nonatomic, strong) UIColor *rulerBackgroundColor;
+
+// 高亮的时间段 的颜色
+@property (nonatomic) CustomeColor segmentColor;
+
+// 高亮的时间段 的集合
+@property (nonatomic, strong) NSMutableArray<TimeSegment *> *segments;
 
 /**
  UI重绘
